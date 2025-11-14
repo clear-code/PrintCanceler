@@ -9,7 +9,7 @@ testee:
 	mkdir $@
 
 testee/edge.js: edge/background.js testee
-	sed -e "s/RepostConfirmationCancelerTalkClient.init();/exports.client = RepostConfirmationCancelerTalkClient/g" -e "s/ResourceCap.init();//g" edge/background.js > $@
+	sed -e "s/PrintCancelerTalkClient.init();/exports.client = PrintCancelerTalkClient/g" -e "s/ResourceCap.init();//g" edge/background.js > $@
 
 unittest: install_dependency testee/edge.js
 	#npx mocha --require mocha-suppress-logs test
