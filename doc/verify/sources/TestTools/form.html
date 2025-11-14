@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>フォーム再送信サンプル</title>
+</head>
+<body>
+  <h1>フォーム再送信サンプル</h1>
+  <p>送信ボタンを押下後、リロードすると「フォームを再送信しますか？」ダイアログが表示されます。</p>
+  <p>送信ボタンを押下後、ブラウザの「戻る」「進む」を実行すると、「フォームを再送信しますか？」（ERR_CACHE_MISS）エラーページが表示されます。</p>
+  <form method="POST" action="http://localhost:8080">
+    <label>名前: <input type="text" name="name"></label>
+    <button type="submit">送信</button>
+  </form>
+  <p>本フォームは外部にはデータ送信しません。</p>
+  <button id="openFormBtn">フォームをダイアログで開く</button>
+
+  <script>
+    document.getElementById('openFormBtn').addEventListener('click', function() {
+      window.open('form.html',
+                  'formWindow',
+                  'width=500,height=400,resizable=yes,scrollbars=yes'
+      );});
+  </script>
+</body>
+</html>
