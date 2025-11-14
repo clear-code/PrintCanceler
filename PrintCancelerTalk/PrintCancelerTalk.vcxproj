@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{58C3AA81-47F2-43DB-BCD1-1D3B43AD4D7B}</ProjectGuid>
+    <ProjectGuid>{9503856F-1452-40EA-B3A1-8FDB3151D2BD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>PrintCancelerTalk</ProjectName>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>

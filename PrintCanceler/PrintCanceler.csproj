@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6153B03D-CB7F-4096-90BA-CEAD50EE0F54}</ProjectGuid>
+    <ProjectGuid>{7241A58D-BC35-4313-93DA-9B933BB449F3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>PrintCanceler</RootNamespace>
     <AssemblyName>PrintCanceler</AssemblyName>
