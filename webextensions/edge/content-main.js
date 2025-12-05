@@ -1,4 +1,4 @@
-const originalPrint = window.print;
+const originalPrint = window.print.bind(window);
 window.print = function ()
 {
     console.log("overloaded window.print");
