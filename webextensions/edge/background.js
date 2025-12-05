@@ -21,10 +21,11 @@ chrome.scripting.registerContentScripts([{
 }]);
 
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, sender, _sendResponse) => {
   console.log("accept message.");
   if (message === 'cancel') {
-    sendResponse(user);
+    const query = new String('Q ' + BROWSER);
+    chrome.runtime.sendNativeMessage(SERVER_NAME, query);
   }
   return true;
 });
