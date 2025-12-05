@@ -29,8 +29,8 @@ Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "Ver
 Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "ExtensionExecfile"; ValueData: "{app}\PrintCanceler.exe"
 
 ;Edge
-Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.repost_confirmation_canceler"; Flags: uninsdeletekey
-Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.repost_confirmation_canceler"; ValueType: string; ValueData: "{app}\PrintCancelerHost\edge.json";
+Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.print_canceler"; Flags: uninsdeletekey
+Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.print_canceler"; ValueType: string; ValueData: "{app}\PrintCancelerHost\edge.json";
 
 [Languages]
 Name: jp; MessagesFile: "compiler:Languages\Japanese.isl"

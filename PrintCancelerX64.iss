@@ -39,8 +39,8 @@ Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; Val
 
 
 ;Edge
-Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.repost_confirmation_canceler"; Flags: uninsdeletekey
-Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.repost_confirmation_canceler"; ValueType: string; ValueData: "{app}\PrintCancelerHost\edge.json";
+Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.print_canceler"; Flags: uninsdeletekey
+Root: HKLM; Subkey: "SOFTWARE\Microsoft\Edge\NativeMessagingHosts\com.clear_code.print_canceler"; ValueType: string; ValueData: "{app}\PrintCancelerHost\edge.json";
 
 [Languages]
 Name: jp; MessagesFile: "compiler:Languages\Japanese.isl"
