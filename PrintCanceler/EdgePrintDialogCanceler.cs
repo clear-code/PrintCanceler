@@ -65,25 +65,25 @@ namespace PrintCanceler
         {
             try
             {
-                var confirmDialogNameCondition = new OrCondition(
-                    new PropertyCondition(AutomationElement.NameProperty, "Resubmit the form?"),
-                    new PropertyCondition(AutomationElement.NameProperty, "フォームを再送信しますか?"));
-                var confirmDialogCondition = new AndCondition(
-                    confirmDialogNameCondition,
+                var printDialogNameCondition = new OrCondition(
+                    new PropertyCondition(AutomationElement.NameProperty, "Print"),
+                    new PropertyCondition(AutomationElement.NameProperty, "印刷"));
+                var printDialogCondition = new AndCondition(
+                    printDialogNameCondition,
                     new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Window));
-                var confirmDialogElement = edgeElement.FindFirst(TreeScope.Descendants, confirmDialogCondition);
-                if (confirmDialogElement == null)
+                var printDialogElement = edgeElement.FindFirst(TreeScope.Descendants, printDialogCondition);
+                if (printDialogElement == null)
                 {
                     return;
                 }
-                context.Logger.Log($"Found confirmation dialog");
+                context.Logger.Log($"Found print dialog");
                 var cancelButtonNameCondition = new OrCondition(
                     new PropertyCondition(AutomationElement.NameProperty, "Cancel"),
                     new PropertyCondition(AutomationElement.NameProperty, "キャンセル"));
                 var cancelButtonCondition = new AndCondition(
                     cancelButtonNameCondition,
                     new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button));
-                var cancelButtonElement = confirmDialogElement.FindFirst(TreeScope.Descendants, cancelButtonCondition);
+                var cancelButtonElement = printDialogElement.FindFirst(TreeScope.Descendants, cancelButtonCondition);
                 if (cancelButtonElement == null)
                 {
                     return;
@@ -96,19 +96,19 @@ namespace PrintCanceler
                 cancelButton.Invoke();
                 context.Logger.Log($"Dialog canceled");
 
-                // 「フォームを再送信しますか?」ダイアログが消えていることを確認する。
+                // 印刷ダイアログが消えていることを確認する。
                 // 最大10秒待つ。
                 for (int i = 0; i < 10; i++)
                 {
-                    confirmDialogElement = edgeElement.FindFirst(TreeScope.Descendants, confirmDialogCondition);
-                    if (confirmDialogElement == null)
+                    printDialogElement = edgeElement.FindFirst(TreeScope.Descendants, printDialogCondition);
+                    if (printDialogElement == null)
                     {
                         break;
                     }
                     Task.Delay(1000).Wait();
                 }
 
-                if (confirmDialogElement != null)
+                if (printDialogElement != null)
                 {
                     context.Logger.Log($"Dialog not closed");
                     return;
@@ -131,7 +131,7 @@ namespace PrintCanceler
             // メッセージボックスの表示はスレッドをブロックするので、別スレッドで実行する
             Task.Run(() =>
             {
-                MessageBox.Show("フォームの再送信が発生するため、このサイトでのリロードは禁止されています。\n\nリロードはキャンセルされました。", "PrintCanceler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("この場面での印刷は禁止されています。\n\n印刷はキャンセルされました。", "PrintCanceler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             });
 
             // メッセージボックスがEdgeの後ろ側に来てしまうことがあるので、強制的にフォーカスする。
