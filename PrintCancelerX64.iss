@@ -25,16 +25,16 @@ Root: HKLM; Subkey: "Software\PrintCanceler"; Flags: uninsdeletekey
 Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "Path"; ValueData: "{app}\"
 Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "ClientType"; ValueData: ""
 Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "Version"; ValueData: "1.0.0.0"
-Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "Rulefile"; ValueData: "{app}\PrintCanceler.ini"
-Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "RCAPfile"; ValueData: "{app}\ResourceCap.ini"
+;Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "Rulefile"; ValueData: "{app}\PrintCanceler.ini"
+;Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "RCAPfile"; ValueData: "{app}\ResourceCap.ini"
 Root: HKLM; Subkey: "Software\PrintCanceler"; ValueType: string; ValueName: "ExtensionExecfile"; ValueData: "{app}\PrintCanceler.exe"
 
 Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; Flags: uninsdeletekey
 Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "Path"; ValueData: "{app}\"
 Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "ClientType"; ValueData: ""
 Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "Version"; ValueData: "1.0.0.0"
-Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "Rulefile"; ValueData: "{app}\PrintCanceler.ini"
-Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "RCAPfile"; ValueData: "{app}\ResourceCap.ini"
+;Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "Rulefile"; ValueData: "{app}\PrintCanceler.ini"
+;Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "RCAPfile"; ValueData: "{app}\ResourceCap.ini"
 Root: HKLM; Subkey: "Software\WOW6432Node\PrintCanceler"; ValueType: string; ValueName: "ExtensionExecfile"; ValueData: "{app}\PrintCanceler.exe"
 
 
@@ -50,7 +50,7 @@ Name: jp; MessagesFile: "compiler:Languages\Japanese.isl"
 ;exe
 Source: "bin\Release\PrintCanceler.exe"; DestDir: "{app}\";Flags: ignoreversion;permissions:users-readexec admins-full system-full
 ;ini
-Source: "Resources\PrintCanceler.ini"; DestDir: "{app}"; Flags: onlyifdoesntexist
+;Source: "Resources\PrintCanceler.ini"; DestDir: "{app}"; Flags: onlyifdoesntexist
 
 ;host
 Source: "bin\x64\Release\PrintCancelerTalk.exe"; DestDir: "{app}\PrintCancelerHost";Flags: ignoreversion;permissions:users-readexec admins-full system-full
