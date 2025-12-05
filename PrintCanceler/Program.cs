@@ -42,7 +42,7 @@ class Program
             {
                 var runtimeContext = new RuntimeContext(RunTimeMode.Server);
                 Task serverTask = Task.Run(() => ProcessCommunicator.RunNamedPipedServer(runtimeContext));
-                Task watchTask = Task.Run(() => EdgeConfirmationDialogCanceler.WatchDialog(runtimeContext));
+                Task watchTask = Task.Run(() => EdgePrintDialogCanceler.WatchDialog(runtimeContext));
                 Task.WhenAll(serverTask, watchTask).Wait();
             }
             finally

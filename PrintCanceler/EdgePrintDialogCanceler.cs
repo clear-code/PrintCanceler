@@ -15,7 +15,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace PrintCanceler
 {
-    internal static class EdgeConfirmationDialogCanceler
+    internal static class EdgePrintDialogCanceler
     {
         internal static void WatchDialog(RuntimeContext context)
         {
