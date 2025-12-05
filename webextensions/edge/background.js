@@ -23,9 +23,16 @@ chrome.scripting.registerContentScripts([{
 
 chrome.runtime.onMessage.addListener((message, _sender, _sendResponse) => {
   console.log('accept message.');
-  if (message === 'cancel') {
-    const query = new String('Q ' + BROWSER);
-    chrome.runtime.sendNativeMessage(SERVER_NAME, query);
+  switch (message?.type) {
+    case 'deny': {
+      const query = new String('B ' + BROWSER);
+      chrome.runtime.sendNativeMessage(SERVER_NAME, query);
+    }; break;
+
+    case 'allow': {
+      const query = new String('E ' + BROWSER);
+      chrome.runtime.sendNativeMessage(SERVER_NAME, query);
+    }; break;
   }
   return true;
 });

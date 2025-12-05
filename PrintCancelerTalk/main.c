@@ -143,15 +143,20 @@ int main(int argc, char *argv[])
 	 *
 	 *  "C edge"
 	 *    ... Read and return PrintCanceler.ini.
-	 *  "Q edge
-	 *    ... Open PrintCanceler for edge.
+	 *  "B edge
+	 *    ... Start (begin) PrintCanceler for edge.
+	 *  "E edge
+	 *    ... Stop (end) PrintCanceler for edge.
 	 */
 	switch (cmd[0]) {
 	case 'C':
 	    ret = cb_config(cmd);
 	    break;
-	case 'Q':
-	    ret = cb_query(cmd);
+	case 'B':
+	    ret = cb_query_start(cmd);
+	    break;
+	case 'E':
+	    ret = cb_query_stop(cmd);
 	    break;
 	default:
 	    fprintf(stderr, "unknown command '%s'", cmd);
