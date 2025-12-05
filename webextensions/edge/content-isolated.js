@@ -4,12 +4,10 @@ window.addEventListener('beforeprint', _event => {
   const isPrintEnabled = window.isPrintEnabled;
   window.isPrintEnabled = false;
   if (!isPrintEnabled) {
-    chrome.runtime.sendMessage({ type: 'deny' }, _response => {
-    });
+    chrome.runtime.sendMessage({ type: 'deny' });
   }
   else {
-    chrome.runtime.sendMessage({ type: 'allow' }, _response => {
-    });
+    chrome.runtime.sendMessage({ type: 'allow' });
   }
 });
 
