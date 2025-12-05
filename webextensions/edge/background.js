@@ -8,7 +8,7 @@ chrome.scripting.registerContentScripts([{
   js: ['content-main.js'],
   allFrames: true,
   runAt: 'document_start',
-  world: "MAIN",
+  world: 'MAIN',
 }]);
 
 chrome.scripting.registerContentScripts([{
@@ -17,12 +17,12 @@ chrome.scripting.registerContentScripts([{
   js: ['content-isolated.js'],
   allFrames: true,
   runAt: 'document_start',
-  world: "ISOLATED",
+  world: 'ISOLATED',
 }]);
 
 
-chrome.runtime.onMessage.addListener((message, sender, _sendResponse) => {
-  console.log("accept message.");
+chrome.runtime.onMessage.addListener((message, _sender, _sendResponse) => {
+  console.log('accept message.');
   if (message === 'cancel') {
     const query = new String('Q ' + BROWSER);
     chrome.runtime.sendNativeMessage(SERVER_NAME, query);
@@ -30,4 +30,4 @@ chrome.runtime.onMessage.addListener((message, sender, _sendResponse) => {
   return true;
 });
 
-console.log("service worker started.");
+console.log('service worker started.');
