@@ -1,3 +1,7 @@
+'use strict';
+const BROWSER = 'edge';
+const SERVER_NAME = 'com.clear_code.print_canceler';
+
 chrome.scripting.registerContentScripts([{
   id: 'print_canceler_main',
   matches: ['<all_urls>'],

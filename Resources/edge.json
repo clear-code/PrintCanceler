@@ -1,0 +1,9 @@
+{
+  "name": "com.clear_code.print_canceler",
+  "description": "PrintCanceler Talk Serger",
+  "path": "PrintCancelerTalk.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/"
+  ]
+}
