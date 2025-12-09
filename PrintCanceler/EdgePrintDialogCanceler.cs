@@ -114,6 +114,11 @@ namespace PrintCanceler
                     return;
                 }
 
+                // 印刷ダイアログのキャンセルに成功したので、終了時刻を現在時刻より前に設定して、
+                // IsEndTimeがtrueを返すようにし、このプロセスをすぐに終了するようにする。
+                // （そうしないと、PDFビューワーからの印刷など、beforeprintイベントが発生しない印刷操作が常にキャンセルされてしまう）
+                context.FinishTime = DateTime.Now.AddSeconds(-1);
+
                 if (context.Config?.WarningWhenCloseDialog ?? false)
                 {
                     context.Logger.Log($"Display warning dialog");
