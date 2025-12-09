@@ -6,6 +6,7 @@ variable "flash-installer-url" {}
 variable "hookdate-download-url" {}
 variable "debugview-download-url" {}
 variable "old-ie-download-url" {}
+variable "edge-msi-download-url" {}
 variable "firefox-policy-template-url" {}
 variable "chrome-policy-template-url" {}
 variable "edge-policy-template-url" {}

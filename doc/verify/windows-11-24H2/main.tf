@@ -371,6 +371,19 @@ resource "local_file" "playbook" {
       win_shortcut:
         src: '%ProgramFiles(x86)%'
         dest: '%Public%\Desktop\Program Files (x86).lnk'
+    - name: Download Edge installer
+      when: not "${var.edge-msi-download-url}" == ""
+      win_get_url:
+        url: "${var.edge-msi-download-url}"
+        dest: 'C:\Users\Public\Edge.msi'
+        url_username: "${var.download-user}"
+        url_password: "${var.download-token}"
+    - name: Disable Edge update
+      when: not "${var.edge-msi-download-url}" == ""
+      win_shell: netsh advfirewall firewall add rule name="Disable Edge Updates" dir=out action=block program="C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe"
+    - name: Install Edge from installer
+      when: not "${var.edge-msi-download-url}" == ""
+      win_shell: msiexec /I C:\Users\Public\Edge.msi ALLOWDOWNGRADE=1
     - name: Download PrintCanceler for webextensions
       win_get_url:
         url: "https://github.com/clear-code/PrintCanceler/archive/main.zip"
