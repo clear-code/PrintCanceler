@@ -373,7 +373,7 @@ resource "local_file" "playbook" {
         dest: '%Public%\Desktop\Program Files (x86).lnk'
     - name: Download PrintCanceler for webextensions
       win_get_url:
-        url: "https://github.com/clear-code/PrintCanceler/archive/refs/heads/main.zip"
+        url: "https://github.com/clear-code/PrintCanceler/archive/main.zip"
         dest: 'c:\Users\Public\PrintCanceler-main.zip'
     - name: Extract contents
       win_unzip:
