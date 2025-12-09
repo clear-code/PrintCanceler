@@ -4,6 +4,6 @@
   "path": "PrintCancelerTalk.exe",
   "type": "stdio",
   "allowed_origins": [
-    "chrome-extension://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/"
+    "chrome-extension://mpcpmdhaecmjiaglbkaejhhiipghlfea/"
   ]
 }
