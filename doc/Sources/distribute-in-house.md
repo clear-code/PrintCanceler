@@ -40,6 +40,8 @@ PrintCanceler拡張機能は、ADドメイン参加端末に対してグルー�
 * 適用時に必要なサーバー：全端末からアクセス可能なファイル配布用サーバー 1台
   * Windows ファイル共有サーバー、もしくは WWW サーバーが必要です。
   * 本サーバーはドメインコントローラーとの兼用可です。
+* ドメインコントローラーに、Microsoft Edgeのグループポリシーテンプレートが導入済みである必要があります。  
+  https://learn.microsoft.com/ja-jp/deployedge/configure-microsoft-edge
 
 また、クリアコードが提供する PrintCanceler_組織内サーバー配布.zip （組織内サーバー配布用PrintCanceler拡張機能関連ファイル一式を含むZipファイル）を準備します。
 
