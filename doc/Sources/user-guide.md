@@ -77,17 +77,9 @@ Windows環境に合っていないセットアップファイルを実行する�
 
 ![](user-guide/media/image3.png)
 
-> このプログラムは  
-> x86プロセッサー向けの Windows にしかインストールできません。
+> このプログラムはお使いのバージョンの Windows をサポートしていません。
 
-対処方法：PrintCancelerSetup_x64.exeを利用してください。
-
-![](user-guide/media/image4.png)
-
-> このプログラムは  
-> x64プロセッサー向けの Windows にしかインストールできません。
-
-対処方法：PrintCancelerSetup_x86.exeを利用してください。
+対処方法：PrintCancelerSetup_x64.exe または PrintCancelerSetup_x86.exe のうち、環境に合う物を利用してください。
 
 ### Windows 11(64bit)、Windows 10(64bit)環境のセットアップ例
 
@@ -243,17 +235,9 @@ Windows環境に合っていないセットアップファイルを実行する�
 
 ![](user-guide/media/image3.png)
 
-> このプログラムは  
-> x86プロセッサー向けの Windows にしかインストールできません。
+> このプログラムはお使いのバージョンの Windows をサポートしていません。
 
-対処方法：PrintCancelerSetup_x64.exeを利用してください。
-
-![](user-guide/media/image4.png)
-
-> このプログラムは  
-> x64プロセッサー向けの Windows にしかインストールできません。
-
-対処方法：PrintCancelerSetup_x86.exeを利用してください。
+対処方法：PrintCancelerSetup_x64.exe または PrintCancelerSetup_x86.exe のうち、環境に合う物を利用してください。
 
 ## Windows 11(64bit)、Windows 10(64bit)環境のセットアップ例
 
@@ -265,11 +249,11 @@ Windows環境に合っていないセットアップファイルを実行する�
 
 2. 「インストール」ボタンをクリックします。
 
-    ![](user-guide/media/image18.png)
+    ![](user-guide/media/image6.png)
 
 3. 「完了」ボタンをクリックします。
 
-    ![](user-guide/media/image19.png)
+    ![](user-guide/media/image9.png)
 
 以上で、バージョンアップ作業は完了です。
 
