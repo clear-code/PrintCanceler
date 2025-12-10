@@ -29,11 +29,11 @@ PANDOC_OPT_DOCX= --toc-depth=2 --table-of-contents \
                  -t docx \
                  --reference-doc="$(BASE)/assets/style-reference.docx"
 
-all:  user-guide troubleshooting-guide
+all:  user-guide troubleshooting-guide distribute-in-house
 
-all-pdf: user-guide-pdf troubleshooting-guide-pdf
+all-pdf: user-guide-pdf troubleshooting-guide-pdf distribute-in-house-pdf
 
-all-docx: user-guide-docx troubleshooting-guide-docx
+all-docx: user-guide-docx troubleshooting-guide-docx distribute-in-house-docx
 
 user-guide: user-guide-pdf user-guide-docx
 
@@ -54,6 +54,16 @@ troubleshooting-guide-pdf:
 troubleshooting-guide-docx:
 	test -d "$(OUTDIR)" || mkdir "$(OUTDIR)"
 	cat troubleshooting-guide.md | pandoc ${PANDOC_OPT_DOCX} -o "$(OUTDIR)/troubleshooting-guide-$(DATE).docx"
+
+distribute-in-house: distribute-in-house-pdf distribute-in-house-docx
+
+distribute-in-house-pdf:
+	test -d "$(OUTDIR)" || mkdir "$(OUTDIR)" 
+	cat distribute-in-house.md | pandoc ${PANDOC_OPT_PDF} -o "$(OUTDIR)/distribute-in-house-$(DATE).pdf"
+
+distribute-in-house-docx:
+	test -d "$(OUTDIR)" || mkdir "$(OUTDIR)"
+	cat distribute-in-house.md | pandoc ${PANDOC_OPT_DOCX} -o "$(OUTDIR)/distribute-in-house-$(DATE).docx"
 
 clean:
 	rm -rf $(OUTDIR)
