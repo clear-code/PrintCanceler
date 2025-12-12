@@ -7,7 +7,7 @@ title: |
   Microsoft Edge用PrintCanceler拡張機能
   組織内サーバーを用いた配布・更新手順
 subject: 組織内サーバーを用いた配布・更新手順
-date: 2025/12/10
+date: 2025/12/12
 author: 株式会社クリアコード
 keywords: [PrintCanceler, Distribute in-house]
 titlepage: true
@@ -19,7 +19,7 @@ toc-own-page: true
 
 | 日付       | Version | 備考                                  |
 |------------|---------|---------------------------------------|
-| 2025/12/10 | 1.0.0   | 第1版                                 |
+| 2025/12/12 | 1.0.0   | 第1版                                 |
 
 # 目的
 

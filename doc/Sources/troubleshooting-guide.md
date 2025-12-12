@@ -7,7 +7,7 @@ title: |
   PrintCanceler
   トラブルシューティングガイド
 subject: PrintCancelerトラブルシューティングガイド
-date: 2025/12/10
+date: 2025/12/12
 author: 株式会社クリアコード
 keywords: [PrintCanceler, Troubleshooting guide]
 titlepage: true
@@ -19,7 +19,7 @@ toc-own-page: true
 
 | 日付       | Version | 備考                              |
 |------------|---------|-----------------------------------|
-| 2025/12/10 | 1.0.0   | 第1版                             |
+| 2025/12/12 | 1.0.0   | 第1版                             |
 
 **本書について**
 
