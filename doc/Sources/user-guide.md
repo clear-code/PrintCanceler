@@ -91,18 +91,14 @@ Windows環境に合っていないセットアップファイルを実行する�
 
 2. 「次へ」ボタンをクリックします。
 
-    ![](user-guide/media/image6.png)  
+    ![](user-guide/media/image7.png)  
     ■インストール先を変更する場合は、「参照」ボタンよりインストール先を変更します。
 
-3. 「次へ」ボタンをクリックします。
-
-    ![](user-guide/media/image7.png)
-
-4. 「インストール」ボタンをクリックします。
+3. 「インストール」ボタンをクリックします。
 
     ![](user-guide/media/image8.png)
 
-5. 「完了」ボタンをクリックします。
+4. 「完了」ボタンをクリックします。
 
     ![](user-guide/media/image9.png)
 
